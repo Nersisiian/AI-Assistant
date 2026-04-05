@@ -32,7 +32,7 @@ Production-ready AI Assistant API built with FastAPI, featuring memory, RAG (doc
 ### 1. Clone repo
 
 ```bash
-git clone https://github.com/your-username/ai-assistant.git
+git clone https://github.com/Nersisiian/AI-Assistant.git
 cd ai-assistant
 ```
 
