@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: ai-assistant-app
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ./vector_db:/app/vector_db
+      - ./app:/app/app
+
+  db:
+    image: postgres:15
+    container_name: ai-assistant-db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_assistant}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ai-assistant-data:/var/lib/postgresql/data
+
+volumes:
+  ai-assistant-data:

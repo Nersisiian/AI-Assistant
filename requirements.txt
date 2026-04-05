@@ -1,0 +1,14 @@
+fastapi==0.111.0
+uvicorn[standard]==0.23.1
+sqlalchemy==2.0.26
+asyncpg==0.27.0
+pydantic<2
+python-dotenv==1.0.0
+passlib[bcrypt]==1.7.4
+python-jose==3.3.0
+openai==1.31.0
+faiss-cpu==1.7.4
+numpy==1.26.4
+pypdf==3.12.2
+email-validator==2.3.0
+python-multipart>=0.0.7
